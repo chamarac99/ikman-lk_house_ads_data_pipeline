@@ -34,14 +34,44 @@ This project automates the extraction of real estate advertisements from [ikman.
 
 ---
 
-## 📁 Project Structure
+
+## ⚙️ Setup Instructions
+
+### 🔧 Prerequisites
+- Python ≥ 3.8
+- PostgreSQL (local/cloud)
+- Airflow environment (with CLI)
+
+### 1. Clone the Repo
+```bash
+git clone https://github.com/chamarac99/ikman-house-ads-pipeline.git
+cd ikman-house-ads-pipeline
+```
+
+### 2. Set Up Environment
 
 ```bash
-ikman-house-ads-pipeline/
-├── dags/
-│   └── dag_with_ikman_house_ads.py   # Airflow DAG script
-├── README.md                         # You're reading this
-├── requirements.txt                  # All dependencies
-└── assets/
-    ├── airflow_pipeline.png          # Architecture diagram
-    └── ikman_logo.png                # Ikman.lk or custom project logo
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+### 3. Configure Airflow Connection
+Use Airflow UI or CLI to create the connection:
+```bash
+airflow connections add 'ikman_postgres' \
+    --conn-type 'postgres' \
+    --conn-host 'localhost' \
+    --conn-login 'your_username' \
+    --conn-password 'your_password' \
+    --conn-schema 'your_dbname' \
+    --conn-port '5432'
+```
+🗓️ Scheduling
+The DAG is configured to run daily (@daily) at 2 AM. You can modify it in the DAG file.
+
+📦 Future Improvements
+Add support for scraping other cities.
+
+Store scraped data in cloud storage (e.g., AWS S3).
+
+Dashboard visualization using Streamlit or Metabase.
