@@ -1,6 +1,6 @@
 # 🏠 Ikman.lk House Ads Data Pipeline with Apache Airflow
 
-![Ikman.lk Logo](assets/ikman_logo.png)
+<img src="assets/ikman_logo.png" alt="Ikman.lk Logo" width="180"/>
 
 This project automates the extraction of real estate advertisements from [ikman.lk](https://ikman.lk) for houses in Dehiwala using a web scraper. The data is then inserted into a PostgreSQL database through an **Apache Airflow** pipeline.
 
@@ -22,27 +22,30 @@ This project automates the extraction of real estate advertisements from [ikman.
 - [PostgreSQL](https://www.postgresql.org/)
 - [BeautifulSoup4](https://www.crummy.com/software/BeautifulSoup/)
 - [Pandas](https://pandas.pydata.org/)
-- Python 3
+- Python 3 <img src="https://www.python.org/static/community_logos/python-logo.png" alt="Python Logo" width="40"/>
 
 ---
 
 ## 📷 Architecture
 
-![Pipeline Flow](assets/airflow_pipeline.png)
+<img src="assets/airflow_pipeline.png" alt="Pipeline Flow" width="300"/>
 
 > **Data Flow**: Web Scraping → XCom Push → PostgreSQL Insert → DAG Scheduler
 
 ---
 
-
 ## ⚙️ Setup Instructions
 
 ### 🔧 Prerequisites
+
 - Python ≥ 3.8
 - PostgreSQL (local/cloud)
 - Airflow environment (with CLI)
 
+---
+
 ### 1. Clone the Repo
+
 ```bash
 git clone https://github.com/chamarac99/ikman-house-ads-pipeline.git
 cd ikman-house-ads-pipeline
