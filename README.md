@@ -1,6 +1,6 @@
 # 🏠 Ikman.lk House Ads Data Pipeline with Apache Airflow
 
-<img src="assets/ikman_logo.png" alt="Ikman.lk Logo" width="180"/>
+<img src="assets/ikman_logo.png" alt="Ikman.lk Logo" width="800" height = "300"/>
 
 This project automates the extraction of real estate advertisements from [ikman.lk](https://ikman.lk) for houses in Dehiwala using a web scraper. The data is then inserted into a PostgreSQL database through an **Apache Airflow** pipeline.
 
