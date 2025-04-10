@@ -66,12 +66,15 @@ airflow connections add 'ikman_postgres' \
     --conn-schema 'your_dbname' \
     --conn-port '5432'
 ```
-🗓️ Scheduling
-The DAG is configured to run daily (@daily) at 2 AM. You can modify it in the DAG file.
+###🗓️ Scheduling
+-The DAG is configured to run daily (@daily) at 2 AM. You can modify it in the DAG file.
 
-📦 Future Improvements
-Add support for scraping other cities.
+###📦 Future Improvements
+-Add support for scraping other cities.
 
-Store scraped data in cloud storage (e.g., AWS S3).
+###👨‍💻 Author
+Chamara Bandara
 
-Dashboard visualization using Streamlit or Metabase.
+-Store scraped data in cloud storage (e.g., AWS S3).
+
+-Dashboard visualization using Streamlit or Metabase.
